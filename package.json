@@ -1,0 +1,36 @@
+{
+  "name": "parcel-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "build": "parcel build src/index.html",
+    "workbox": "workbox generateSW workbox-config.js",
+    "postbuild": "npm run workbox",
+    "serve-build": "npm run build && serve -s dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mthpvg/parcel-react.git"
+  },
+  "author": "mthpvg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mthpvg/parcel-react/issues"
+  },
+  "homepage": "https://github.com/mthpvg/parcel-react#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.10.1",
+    "sass": "^1.14.0",
+    "serve": "^10.0.1",
+    "workbox-cli": "^3.6.1"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-router-dom": "^4.3.1"
+  }
+}
