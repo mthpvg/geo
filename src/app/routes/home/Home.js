@@ -15,6 +15,7 @@ export default class Home extends React.Component {
   componentDidMount() {
   }
 
+
   mark() {
     if (!('geolocation' in navigator)) return console.error('No geolocation')
     this.setState({fetching: true})
